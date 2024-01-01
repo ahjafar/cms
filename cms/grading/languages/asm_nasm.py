@@ -49,6 +49,11 @@ class ASM_nasm(CompiledLanguage):
         return [".asm",".S"]
 
     @property
+    def header_extensions(self):
+        """See Language.source_extensions."""
+        return [".h", ".c", ".inc", ".sh"]
+
+    @property
     def object_extensions(self):
         """See Language.source_extensions."""
         return [".o"]
